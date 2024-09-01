@@ -1,144 +1,121 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400&family=Big+Shoulders+Display:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400&family=Big+Shoulders+Display:wght@700&display=swap");
 
-*{
+* {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box; /* don't let padding affect the overall height*/
 }
-body, p, button a {
-  font-family: 'Lexend Deca', sans-serif;
+body,
+p,
+button a {
+    font-family: "Lexend Deca", sans-serif;
 }
 
 h1 {
-  font-family: 'Big Shoulders Display', sans-serif;
-  font-weight: 700; /* Ensures correct weight */
+    font-family: "Big Shoulders Display", sans-serif;
+    font-weight: 700; /* Ensures correct weight */
 }
-#container{
-    height: 800px;
-    width: 70%;
-    margin:300px 750px;
+
+body {
+    /* center content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100dvh; /* same as height of the screen */
+    padding: 2rem;
+    gap: 2rem;
 }
-#sedans,#suvs,#luxury{
-    height: 100%;
-    width: 25%;
-    float: left;
+
+#container {
+    display: flex;
+    border-radius: 15px;
+    overflow: hidden;
+    max-width: 90rem;
 }
-#sedans{
+
+#sedans {
     background-color: hsl(31, 77%, 52%);
-    border-radius: 15px 0px 0px 15px;
 }
-#suvs{
+#suvs {
     background-color: hsl(184, 100%, 22%);
 }
-#luxury{
+#luxury {
     background-color: hsl(179, 100%, 13%);
-    border-radius: 0px 15px 15px 0px;
 }
-img{
+img {
     margin: 50px 50px;
     height: 70px;
     width: 110px;
 }
-.child>h1{
+
+.child {
+    display: flex;
+    flex-direction: column;
+}
+
+.child > h1 {
     color: hsl(0, 0%, 95%);
     margin: 15px 50px;
     font-size: 4rem;
     font-weight: 700;
 }
-.child>p{
+.child > p {
     color: hsla(0, 0%, 100%, 0.75);
     margin: 50px;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.5em;
 }
-.child>button{
+.child > button {
     width: 150px;
     height: 50px;
     border-radius: 25px;
     font-size: 1rem;
     font-weight: 400;
+    margin: 2.5rem;
+    margin-top: auto;
 }
-button{
-    background-color:hsl(0, 0%, 95%);
-    margin: 100px 50px;
-    border: 1px solid white ;
+button {
+    background-color: hsl(0, 0%, 95%);
+    border: 1px solid white;
 }
-a{
+a {
     text-decoration: none;
 }
-#button1{
-    color:hsl(31, 77%, 52%);
+#button1 {
+    color: hsl(31, 77%, 52%);
 }
-#button2{
+#button2 {
     color: hsl(184, 100%, 22%);
 }
-#button3{
+#button3 {
     color: hsl(179, 100%, 13%);
 }
-button:hover>#button1,button:hover>#button2,button:hover>#button3{
+button:hover > #button1,
+button:hover > #button2,
+button:hover > #button3 {
     color: white;
 }
-#orange:hover{
+#orange:hover {
     background-color: hsl(31, 77%, 52%);
 }
-#green:hover{
+#green:hover {
     background-color: hsl(184, 100%, 22%);
 }
-#darkgreen:hover{
+#darkgreen:hover {
     background-color: hsl(179, 100%, 13%);
-}
-@media (min-width: 768px) {
-    #container {
-        height: 800px;
-        width: 50%;
-        margin:300px 750px;
-    }
-
-    #sedans, #suvs, #luxury {
-        height: 800px;
-        width: 33.33%;
-    }
-
-    #sedans {
-        border-radius: 15px 0 0 15px;
-    }
-
-    #luxury {
-        border-radius: 0 15px 15px 0;
-    }
-
-    .child > h1 {
-        font-size: 3.5rem;
-    }
-
-    .child > p {
-        font-size: 1.8rem;
-        font-weight: normal;
-    }
-    .child>button{
-        font-size: 1rem;
-        font-weight: 900;
-    }
 }
 
 @media (max-width: 767px) {
     #container {
         flex-direction: column;
-        align-items: stretch;
-        width: 90%;
-        margin: 0 auto;
     }
 
-    #sedans, #suvs, #luxury {
+    #sedans,
+    #suvs,
+    #luxury {
         width: 100%;
         height: auto;
-        border-radius: 0;
-    }
-
-    #sedans {
-        border-radius: 15px 15px 0 0;
-    }
-
-    #luxury {
-        border-radius: 0 0 15px 15px;
     }
 
     .child > h1 {
@@ -146,7 +123,7 @@ button:hover>#button1,button:hover>#button2,button:hover>#button3{
     }
 
     .child > p {
-        font-size: 2.3rem;
+        font-size: 1rem;
     }
 
     .child > button {
@@ -156,4 +133,3 @@ button:hover>#button1,button:hover>#button2,button:hover>#button3{
         font-size: 1.5rem;
     }
 }
-
